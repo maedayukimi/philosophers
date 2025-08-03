@@ -6,7 +6,7 @@
 /*   By: mawako <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 14:36:29 by mawako            #+#    #+#             */
-/*   Updated: 2025/07/31 18:39:20 by mawako           ###   ########.fr       */
+/*   Updated: 2025/08/03 15:52:09 by mawako           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ void	*philosopher(void *arg)
 		return (NULL);
 	if (philo->table->nb_philos == 1)
 		return (solo_routine(philo));
-	if (philo->id % 2)
-		custom_think(philo, true);
 	while (!is_simulation_stopped(philo->table))
 	{
 		do_eat_sleep(philo);
